@@ -10,7 +10,7 @@
 
 ---
 
-## [Application Link](https://zainul-loan-default-prediction.streamlit.app/)
+<h2><a href="https://zainul-loan-default-prediction.streamlit.app/" target="_blank"> Application Link </a></h2>
 
 ## 📋 Table of Contents
 
