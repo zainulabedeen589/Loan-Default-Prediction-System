@@ -1,0 +1,10 @@
+artifact_location: file:///Users/Apple/ZAINUL_AI/DS/ML-Project/Loan Default Prediction/mlruns/628960931124106479/models/m-bf2af856f2e44e279f19f3decdfa6372/artifacts
+creation_timestamp: 1776164573256
+experiment_id: '628960931124106479'
+last_updated_timestamp: 1776164575677
+model_id: m-bf2af856f2e44e279f19f3decdfa6372
+model_type: null
+name: model
+source_run_id: d51488516eb342bebf6a18a0b1425bbc
+status: 2
+status_message: null

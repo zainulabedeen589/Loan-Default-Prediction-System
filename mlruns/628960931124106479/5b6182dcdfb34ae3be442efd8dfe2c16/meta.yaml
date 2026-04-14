@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/Apple/ZAINUL_AI/DS/ML-Project/Loan Default Prediction/mlruns/628960931124106479/5b6182dcdfb34ae3be442efd8dfe2c16/artifacts
+end_time: 1776165786628
+entry_point_name: ''
+experiment_id: '628960931124106479'
+lifecycle_stage: active
+run_id: 5b6182dcdfb34ae3be442efd8dfe2c16
+run_name: crawling-panda-317
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776165658886
+status: 3
+tags: []
+user_id: Apple
