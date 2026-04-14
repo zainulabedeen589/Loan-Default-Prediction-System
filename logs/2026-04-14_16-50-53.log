@@ -1,0 +1,81 @@
+[2026-04-14 16:50:54,236] src.data_ingestion - INFO - Data Ingestion has started
+[2026-04-14 16:50:54,236] src.data_ingestion - INFO - Directory for Ingestion created
+[2026-04-14 16:50:54,500] src.data_ingestion - INFO - Data loaded successfully with shape: (255347, 18)
+[2026-04-14 16:50:54,528] src.data_ingestion - INFO - Data Splitted Sucessfully
+[2026-04-14 16:50:55,317] src.data_ingestion - INFO - Training and testing data saved sucesffuly
+[2026-04-14 16:50:55,329] src.data_processing - INFO - Starting the pipeline of Data Procesing
+[2026-04-14 16:50:55,329] src.data_processing - INFO - Data Processinng Started
+[2026-04-14 16:50:55,539] src.data_processing - INFO - Data read succesfull : Data shape : (204277, 18)
+[2026-04-14 16:50:55,539] src.data_processing - INFO - Dropping Unnecesary Columns :  ['LoanID']
+[2026-04-14 16:50:55,551] src.data_processing - INFO - Columns dropped Sucesfully : Shape = (204277, 17)
+[2026-04-14 16:50:55,557] src.data_processing - INFO - Handling outliers : Columns = Index(['Age', 'Income', 'LoanAmount', 'CreditScore', 'MonthsEmployed',
+       'NumCreditLines', 'InterestRate', 'LoanTerm', 'DTIRatio'],
+      dtype='object')
+[2026-04-14 16:50:55,606] src.data_processing - INFO - Outliers handled  Sucesffuully : (204277, 17)
+[2026-04-14 16:50:56,560] src.data_processing - INFO - Processed data saved sucesfully
+[2026-04-14 16:50:56,560] src.data_processing - INFO - Data Proccesing Pipeline Completed Sucessfully
+[2026-04-14 16:50:56,563] src.feature_engineering - INFO - Starting your feature enginnering pipeline
+[2026-04-14 16:50:56,563] src.feature_engineering - INFO - Loading data
+[2026-04-14 16:50:56,727] src.feature_engineering - INFO - Data loaded sucesffuly
+[2026-04-14 16:50:56,727] src.feature_engineering - INFO - Starting Binning of Age Column
+[2026-04-14 16:50:56,732] src.feature_engineering - INFO - Columns after binning : Index(['Age', 'Income', 'LoanAmount', 'CreditScore', 'MonthsEmployed',
+       'NumCreditLines', 'InterestRate', 'LoanTerm', 'DTIRatio', 'Education',
+       'EmploymentType', 'MaritalStatus', 'HasMortgage', 'HasDependents',
+       'LoanPurpose', 'HasCoSigner', 'Default', 'Age_Group'],
+      dtype='object')
+[2026-04-14 16:50:56,732] src.feature_engineering - INFO - Binning of Age Column Sucesfull
+[2026-04-14 16:50:56,732] src.feature_engineering - INFO - Performing label encoding on ['Age_Group', 'Education', 'EmploymentType', 'MaritalStatus', 'HasMortgage', 'HasDependents', 'LoanPurpose', 'HasCoSigner']
+[2026-04-14 16:50:56,892] src.feature_engineering - INFO - Mapping for Age_Group : {'Adult': np.int64(0), 'Child': np.int64(1), 'Senior': np.int64(2), 'Super Senior': np.int64(3), 'Teenager': np.int64(4)}
+[2026-04-14 16:50:56,892] src.feature_engineering - INFO - Mapping for Education : {"Bachelor's": np.int64(0), 'High School': np.int64(1), "Master's": np.int64(2), 'PhD': np.int64(3)}
+[2026-04-14 16:50:56,892] src.feature_engineering - INFO - Mapping for EmploymentType : {'Full-time': np.int64(0), 'Part-time': np.int64(1), 'Self-employed': np.int64(2), 'Unemployed': np.int64(3)}
+[2026-04-14 16:50:56,892] src.feature_engineering - INFO - Mapping for MaritalStatus : {'Divorced': np.int64(0), 'Married': np.int64(1), 'Single': np.int64(2)}
+[2026-04-14 16:50:56,892] src.feature_engineering - INFO - Mapping for HasMortgage : {'No': np.int64(0), 'Yes': np.int64(1)}
+[2026-04-14 16:50:56,892] src.feature_engineering - INFO - Mapping for HasDependents : {'No': np.int64(0), 'Yes': np.int64(1)}
+[2026-04-14 16:50:56,892] src.feature_engineering - INFO - Mapping for LoanPurpose : {'Auto': np.int64(0), 'Business': np.int64(1), 'Education': np.int64(2), 'Home': np.int64(3), 'Other': np.int64(4)}
+[2026-04-14 16:50:56,892] src.feature_engineering - INFO - Mapping for HasCoSigner : {'No': np.int64(0), 'Yes': np.int64(1)}
+[2026-04-14 16:50:56,893] src.feature_engineering - INFO - Encoders saved at ./artifact/models/encoding_obj.pkl
+[2026-04-14 16:50:56,893] src.feature_engineering - INFO - Label Encoding successful
+[2026-04-14 16:50:56,893] src.feature_engineering - INFO - Starting Feature Construction
+[2026-04-14 16:50:56,902] src.feature_engineering - INFO - Feature Construction done sucesfully
+[2026-04-14 16:50:56,902] src.feature_engineering - INFO - Starting Feature Selection
+[2026-04-14 16:50:57,520] src.feature_engineering - INFO - Mutual Information Table is : 
+                Feature  Mutual Information
+17            PTI_Ratio            0.359042
+16      Monthly_Payment            0.359025
+19        Debt_per_Line            0.322164
+1            LoanAmount            0.282099
+0                Income            0.238796
+18  Job_Stability_Index            0.023055
+5          InterestRate            0.015975
+15            Age_Group            0.013487
+20      Young_High_Risk            0.006972
+3        MonthsEmployed            0.004855
+2           CreditScore            0.002284
+9        EmploymentType            0.001064
+14          HasCoSigner            0.000818
+12        HasDependents            0.000531
+7              DTIRatio            0.000499
+8             Education            0.000391
+10        MaritalStatus            0.000376
+4        NumCreditLines            0.000371
+13          LoanPurpose            0.000262
+11          HasMortgage            0.000207
+6              LoanTerm            0.000003
+[2026-04-14 16:50:57,522] src.feature_engineering - INFO - Top features : ['PTI_Ratio', 'Monthly_Payment', 'Debt_per_Line', 'LoanAmount', 'Income', 'Job_Stability_Index', 'InterestRate', 'Age_Group', 'Young_High_Risk', 'MonthsEmployed', 'CreditScore', 'EmploymentType']
+[2026-04-14 16:50:57,522] src.feature_engineering - INFO - Feature Selection Sucesfull
+[2026-04-14 16:50:57,523] src.feature_engineering - INFO - Saving your data ...
+[2026-04-14 16:50:58,585] src.feature_engineering - INFO - Data Saved succesfully at ./artifact/engineered_data/final_df.csv
+[2026-04-14 16:50:58,585] src.feature_engineering - INFO - Your FE pipeline sucesfully done..
+[2026-04-14 16:50:58,585] src.feature_engineering - INFO - End of FE pipeline
+[2026-04-14 16:50:58,892] src.model_training - INFO - Loading data for model training...
+[2026-04-14 16:50:59,028] src.model_training - INFO - Data loaded successfully.
+[2026-04-14 16:50:59,028] src.model_training - INFO - Splitting data into train and test sets...
+[2026-04-14 16:50:59,039] src.model_training - INFO - Data splitting completed.
+[2026-04-14 16:50:59,040] src.model_training - INFO - Hyperparameters loaded: {'learning_rate': [0.01, 0.05, 0.1], 'n_estimators': [100, 200, 300], 'max_depth': [5, 10, 15]}
+[2026-04-14 16:50:59,041] src.model_training - INFO - Starting GridSearchCV with LightGBM...
+[2026-04-14 16:53:04,394] src.model_training - INFO - Model training completed.
+[2026-04-14 16:53:04,396] src.model_training - INFO - Evaluating model...
+[2026-04-14 16:53:04,439] src.model_training - INFO - Evaluation metrics: {'accuracy': 0.8848639122772665, 'precision': 0.8551247516343995, 'recall': 0.8848639122772665, 'f1_score': 0.8384588640903365, 'confusion_matrix': [[35938, 135], [4569, 214]]}
+[2026-04-14 16:53:04,444] src.model_training - INFO - Saving model to ./artifact/models/trained_model.pkl
+[2026-04-14 16:53:04,446] src.model_training - INFO - Model saved successfully.
+[2026-04-14 16:53:06,627] src.model_training - INFO - Run successful. Tracking URI: file:///Users/Apple/ZAINUL_AI/DS/ML-Project/Loan Default Prediction/mlruns
