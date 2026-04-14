@@ -10,6 +10,8 @@
 
 ---
 
+## [Application Link](https://zainul-loan-default-prediction.streamlit.app/)
+
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
